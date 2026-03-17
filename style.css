@@ -10,7 +10,7 @@
 
   --bg-color-primary: #f4f5fb;
   --bg-color-secondary: #ffffff;
-  --bg-color-danger: #C93847;
+  --bg-color-danger: #c93847;
 
   --border-color-primary: #d1d5db;
   --border-color-secondary: #b9c2d0;
@@ -59,7 +59,7 @@ body {
 
   &:hover {
     color: var(--btn-color-hover);
-    transition: all .3s;
+    transition: all 0.3s;
   }
 }
 
@@ -126,10 +126,10 @@ ul {
   gap: 12px;
 
   margin-top: 40px;
-  
+
   li {
     padding: 12px;
-    
+
     border: none;
     border-radius: 12px;
     background-color: var(--bg-color-secondary);
@@ -144,7 +144,7 @@ ul {
     cursor: pointer;
   }
 
-  #icon {
+  .remove-icon {
     margin-left: auto;
     cursor: pointer;
   }
@@ -153,7 +153,6 @@ ul {
     font-size: 16px;
     font-weight: medium;
   }
-
 }
 
 footer {
@@ -166,8 +165,7 @@ footer {
   padding: 12px;
   gap: 8px;
 
-  display: flex;
-  align-items: center;
+  display: none;
 
   background-color: var(--bg-color-danger);
 
@@ -175,12 +173,19 @@ footer {
     color: #ffffff;
     font-weight: medium;
   }
-  
-  #close{
+
+  #close {
     margin-left: auto;
     margin-right: 12px;
+    cursor: pointer;
   }
-  
+}
+
+footer.visible {
+  display: flex;
+  align-items: center;
+
+  transition: all .3s;
 }
 
 /* Tablet e acima */
